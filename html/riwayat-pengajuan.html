@@ -1,0 +1,384 @@
+<html>
+    <head>
+        <!--Import bootstrap-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+        <!--Import main.css-->
+        <link href="../css/main.css" rel="stylesheet">
+    </head>
+    <title>
+        riwayat pengajuan
+    </title>
+    <body>
+        <!--navbar landing page-->
+        <nav class="navbar justify-content-between border-bottom bg-container">
+            <a class="navbar-brand" href="#">
+                <img src="../assets/icon/sample_logo_myidscore.png" alt="icon_myidscore">
+            </a>
+
+            <div>
+                <!--notifikasi-->
+                <div class="btn-group">
+                    <a class="nav-item nav-link font-active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">
+                        <img src="../assets/icon/notifikasi-icon.svg" alt="" class="margin-all-8 alert-icon">
+                        <span class="badge badge-danger">4</span>    
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <p class="bodybig margin-all-16">
+                            Notifikasi
+                        </p>
+                        <div class="dropdown-divider"></div>
+
+                        <!--has value-->
+                        <div class="d-flex dropdown-item">
+                            <img src="../assets/icon/checkmarkgreen-icon.svg" alt="" class="margin-all-8">
+                            <div class="margin-all-8">
+                                <p class="bodybig">
+                                    Pengajuan Free berhasil
+                                    <br>
+                                    <small class="font-active">21 Januari 2021</small>
+                                    <br>
+                                    <a href="">Lihat Pengajuan</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="dropdown-divider"></div>
+                        <div class="d-flex dropdown-item">
+                            <img src="../assets/icon/cross.svg" alt="" class="margin-all-8">
+                            <div class="margin-all-8">
+                                <p class="bodybig">
+                                    Pengajuan Silver ditolak
+                                    <br>
+                                    <small class="font-active">21 Januari 2020</small>
+                                    <br>
+                                    <a href="">Lihat Pengajuan</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="dropdown-divider"></div>
+                        <div class="d-flex dropdown-item">
+                            <img src="../assets/icon/clockyellow-icon.svg" alt="" class="margin-all-8">
+                            <div class="margin-all-8">
+                                <p class="bodybig">
+                                    Pengembalian biaya kamu<br> sedang diproses
+                                    <br>
+                                    <small class="font-active">21 Desember 2020</small>
+                                    <br>
+                                    <a href="">Lihat Pengajuan</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="dropdown-divider"></div>
+                        <div class="d-flex dropdown-item">
+                            <img src="../assets/icon/checkmarkgreen-icon.svg" alt="" class="margin-all-8">
+                            <div class="margin-all-8">
+                                <p class="bodybig">
+                                    Pengembalian biaya berhasil
+                                    <br>
+                                    <small class="font-active">24 Desember 2020</small>
+                                    <br>
+                                    <a href="">Lihat Pengajuan</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!--empty state
+                            <div class="dropdown-divider"></div>
+                            <div class="text-center">
+                                <img src="../assets/illustration/notifikasiempty-state.svg" alt="" class="">
+                                <p class="bodybig font-active">
+                                    Belum ada notifikasi
+                                </p>
+                            </div>
+                        -->
+
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item font-link text-center" href="#">
+                            Lihat Semua
+                        </a>
+                    </div>
+                </div>
+    
+                <!--profil-->
+                <div class="btn-group">
+                    <a class="nav-item nav-link font-active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">
+                        <img src="../assets/icon/accountgray-icon.svg" alt="" class="margin-all-8 alert-icon">
+                        Profil Saya
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div class="d-flex dropdown-item">
+                            <img src="../assets/icon/account-icon.svg" alt="" class="margin-all-8">
+                            <div class="margin-all-8">
+                                <p class="bodybig">
+                                    John Doe
+                                    <br>
+                                    <a href="">Lihat Profil Saya</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">
+                            <p class="">
+                                <img src="../assets/icon/keluar-icon.svg" alt="" class="margin-all-8">
+                                Keluar
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!--section Hero-->
+        <section class="margin-top-down-32">
+            <div class="container">
+
+                <div class="col-md-12 mx-auto margin-top-down-32">
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="button button-tertiary button-font">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                            </svg>
+                            Kembali
+                        </button>
+                    </div>
+                    
+                    <div class="margin-top-down-16">
+                        <div class="d-flex fav-icon-container">
+                            <img src="../assets/icon/riwayatpengajuan-icon.svg" alt="" class="">
+                            <h3>Riwayat Pengajuan</h3>
+                        </div>
+                        <p class="bodybig">
+                            Pantau riwayat aplikasi yang Kamu ajukan disini
+                        </p>
+                    </div>
+
+                    <!--empty state
+                    <div class="radius-norm border-soft-1 text-center padding-all-32">
+                        <img src="../assets/illustration/hero-ruangbelajar.png" alt="" class="img-fluid">
+                        <h4>Belum ada pengajuan score</h4>
+                        <p class="bodybig">Disini Kamu dapat memantau status yang kamu ajukan, dan melihat pengajuan aktif Kamu.</p>
+                        <button type="button" class="button button-primary button-font">Buat Pengajuan Baru</button>
+                    </div>
+                    -->
+                        
+                    <!--has value-->
+                    <div class="radius-norm border-soft-1 margin-top-down-16">
+                        <div class="d-flex justify-content-between">
+                            <div class="margin-all-16">
+                                <small class="font-active">
+                                    Berakhir: 23 Maret 2021
+                                </small>
+                                <h5>
+                                    Pengajuan Gold IdScore
+                                </h5>
+                                <div class="status-set status-step-succ no-border d-inline-block">
+                                    <div class="status-set-inside">
+                                        <div class="status-set-inside">
+                                            <img src="../assets/icon/checkmark.svg" alt="" class="">
+                                            Sudah dibayar
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="bodybig font-primary">
+                                    Sisa pengajuan: 1
+                                </p>
+                            </div>
+                            <div class="margin-all-16 align-items-center center-content">
+                                <button type="button" class="button button-secondary button-font">Gunakan Pengajuan</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="radius-norm border-soft-1 margin-top-down-16">
+                        <div class="d-flex justify-content-between">
+                            <div class="margin-all-16">
+                                <small class="font-active">
+                                    Berakhir: Sudah berakhir
+                                </small>
+                                <h5>
+                                    Pengajuan Gold IdScore
+                                </h5>
+                                <div class="status-set status-step-succ no-border d-inline-block">
+                                    <div class="status-set-inside">
+                                        <div class="status-set-inside">
+                                            <img src="../assets/icon/checkmark.svg" alt="" class="">
+                                            Sudah dibayar
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="bodybig font-active">
+                                    Sisa pengajuan: Habis
+                                </p>
+                            </div>
+                            <div class="margin-all-16 align-items-center center-content">
+                                <button type="button" class="btn btn-link">Lihat pengajuan</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="radius-norm border-soft-1 margin-top-down-16">
+                        <div class="d-flex justify-content-between">
+                            <div class="margin-all-16">
+                                <small class="font-active">
+                                    Berakhir: -
+                                </small>
+                                <h5>
+                                    Pengajuan Platinum IdScore
+                                </h5>
+                                <div class="status-set status-step-wait no-border d-inline-block">
+                                    <div class="status-set-inside">
+                                        <img src="../assets/icon/paymentpending-icon.svg" alt="" class="">
+                                        Menunggu Pembayaran
+                                    </div>
+                                </div>
+                                <p class="bodybig font-active">
+                                    Sisa pengajuan: -
+                                </p>
+                            </div>
+                            <div class="margin-all-16 align-items-center center-content">
+                                <button type="button" class="btn btn-link">Lihat pengajuan</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="radius-norm border-soft-1 margin-top-down-16">
+                        <div class="d-flex justify-content-between">
+                            <div class="margin-all-16">
+                                <h5>
+                                    Pengajuan Free IdScore
+                                </h5>
+                                <div class="status-set no-border d-inline-block font-active">
+                                    <div class="status-set-inside">
+                                        <img src="../assets/icon/building-icon.svg" alt="" class="">
+                                        Kunjungan Langsung
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="margin-all-16 align-items-center center-content">
+                                <button type="button" class="btn btn-link">Lihat pengajuan</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="radius-norm border-soft-1 margin-top-down-16">
+                        <div class="d-flex justify-content-between">
+                            <div class="margin-all-16">
+                                <small class="font-active">
+                                    Berakhir: -
+                                </small>
+                                <h5>
+                                    Pengajuan Silver IdScore
+                                </h5>
+                                <div class="status-set status-step-fail no-border d-inline-block">
+                                    <div class="status-set-inside">
+                                        <img src="../assets/icon/cross.svg" alt="" class="">
+                                        Dibatalkan
+                                    </div>
+                                </div>
+                                <p class="bodybig font-active">
+                                    Sisa pengajuan: -
+                                </p>
+                            </div>
+                            <div class="margin-all-16 align-items-center center-content">
+                                <button type="button" class="btn btn-link">Lihat pengajuan</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+
+            </div>
+        </section>
+    
+        <!--footer-->
+        <footer class="border-top">
+            <div class="container p-4">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-lg-8 col-md-12 mb-4 mb-md-0">
+                        <h5 class="font-primary">PT. PEFINDO Biro Kredit</h5>
+                        <div class="content-footer-left">
+                            <svg class="fav-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0)">
+                                <path d="M28 13.3334C28 22.6667 16 30.6667 16 30.6667C16 30.6667 4 22.6667 4 13.3334C4 10.1508 5.26428 7.09853 7.51472 4.84809C9.76516 2.59766 12.8174 1.33337 16 1.33337C19.1826 1.33337 22.2348 2.59766 24.4853 4.84809C26.7357 7.09853 28 10.1508 28 13.3334Z" stroke="#DC1C4D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 17.3334C18.2091 17.3334 20 15.5425 20 13.3334C20 11.1242 18.2091 9.33337 16 9.33337C13.7909 9.33337 12 11.1242 12 13.3334C12 15.5425 13.7909 17.3334 16 17.3334Z" stroke="#DC1C4D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0">
+                                <rect width="32" height="32" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            <p class="bodybig">
+                                Gedung Bursa Efek Indonesia Tower I Lantai 1 <br>
+                                Jl. Jend. Sudirman Kav 52-53 Jakarta 12190<br>
+                                <a href="">Lihat Peta</a>
+                            </p>
+                        </div>
+                    </div>
+            
+                    <!--Grid column-->
+                    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                        <h5 class="font-primary">Ruang Belajar</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-dark">Apa itu MyIdScore</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-dark">Manfaat MyIdScore</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-dark">FAQ</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                        <h5 class="font-primary">Tentang Kami</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-dark">Tentang MyIdScore</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-dark">Tentang PEFINDO</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-dark">Hubungi Kami</a>
+                            </li>
+                        </ul>
+                    </div>
+            
+                </div>
+                <hr>
+                <div class="text-center">
+                    <h5 class="font-active">Diatur dan diawasi oleh</h5>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/OJK_Logo.png" alt="Otoritas Jasa Keuangan" style="height:64px">
+                </div>
+
+                <div class="row margin-top-down-32">
+                    <div class="col-lg-8 col-md-8 mb-4 mb-md-0">
+                        <p class="caption">© Copyright PT PEFINDO Biro Kredit. All Rights Reserved<br> 
+                            Developed by PT PEFINDO Biro Kredit - IT Application Development
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-8 d-flex justify-content-center">
+                        <img src="https://ipsm.io/api/image/36x36/c-718096/jpg" alt="test icon social media" class="margin-all-8" style="border-radius: 50%;">
+                        <img src="https://ipsm.io/api/image/36x36/c-718096/jpg" alt="test icon social media" class="margin-all-8" style="border-radius: 50%;">
+                        <img src="https://ipsm.io/api/image/36x36/c-718096/jpg" alt="test icon social media" class="margin-all-8" style="border-radius: 50%;">
+                        <img src="https://ipsm.io/api/image/36x36/c-718096/jpg" alt="test icon social media" class="margin-all-8" style="border-radius: 50%;">
+                        <img src="https://ipsm.io/api/image/36x36/c-718096/jpg" alt="test icon social media" class="margin-all-8" style="border-radius: 50%;">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

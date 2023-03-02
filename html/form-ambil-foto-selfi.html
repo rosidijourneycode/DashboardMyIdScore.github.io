@@ -1,0 +1,222 @@
+<html>
+    <head>
+        
+        <!--Import bootstrap-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+        <!--select2 lib-->
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
+
+        <!--Import main.css-->
+        <link href="../css/main.css" rel="stylesheet">
+        
+        <!--Title-->
+        <title>form-alamat-lengkap</title>
+
+    </head>
+    <body class="bg-body">
+
+        <!--navbar-->
+        <nav class="navbar bg-container shadow-soft">
+            <a class="navbar-brand" href="#">
+                <h4 class="font-primary">
+                    MyIdScore
+                </h4>
+            </a>
+            
+            <div class="mx-auto none-select">
+                <div class="d-flex">
+                    <div class="p-2">
+                        <div class="row justify-content-center">
+                        <div class="status-step text-center status-step-now">
+                            <p>1</p>
+                        </div>
+                    </div>
+                    <p class="bodybig font-primary">Alamat Lengkap<br>
+                        <small class="text-muted">
+                            Estimasi < 1 menit
+                        </small>
+                    </p>
+                </div>
+                <div class="line-status-bar"></div>
+                <div class="p-2">
+                    <div class="row justify-content-center">
+                        <div class="status-step text-center">
+                            <p>2</p>
+                        </div>
+                    </div>
+                    <p class="bodybig font-active">Paket Layanan<br>
+                        <small class="text-muted">
+                            Estimasi < 1 menit
+                        </small>
+                    </p>
+                </div>
+                <div class="line-status-bar"></div>
+                <div class="p-2">
+                    <div class="row justify-content-center">
+                        <div class="status-step text-center">
+                            <p>3</p>
+                        </div>
+                    </div>
+                    <p class="bodybig font-active">Persetujuan<br>
+                        <small class="text-muted">
+                            Estimasi < 1 menit
+                        </small>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <h4 class="opacity-0 none-select">MyIdScore</h4>
+    </nav>
+        
+        <!--form-->
+        <div class="margin-top-down-32">
+            <div class="col-md-8 shadow-soft rounded bg-container p-4 mx-auto">
+                    <div class="row d-block">
+                        <div class="col">
+                            <h3>Foto Selfie</h3>
+                            <p class="bodybig">Saat pengambilan foto, pastikan wajah tetap tegak dan jika Anda memakai kacamata pastikan mata Anda dapat terlihat jelas pada kamera.</p>
+
+                            <hr>
+
+                            <h5>Selfie</h5>
+                            <p class="bodybig">
+                                Posisikan wajah Anda di area yang disediakan.
+                            </p>
+                            <img src="../assets/illustration/dummy-selfi-preview.png" alt="foto selfi Anda" class="img-fluid margin-top-down-16">
+
+                            <div class="text-center" id="group-button">
+
+                                <button type="button" class="button button-primary button-font" onclick="ambilFoto();" id="ambil-foto">
+                                    <img src="../assets/illustration/camera.svg" alt="camera" class="margin-all-4">
+                                    Ambil Foto
+                                </button>
+
+                                <button type="button" class="d-none" onclick="ambilFoto();" id="ambil-ulang-foto">Ulangi Foto</button>
+                                
+                                <button type="button" class="button button-primary button-font d-none" id="gunakan-foto">Gunakan Foto Ini</button>
+                                
+                            </div>
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-8 mx-auto margin-top-down-32">
+            <div class="d-flex justify-content-between">
+                <button type="button" class="button button-tertiary button-font">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                    </svg>
+                    Kembali
+                </button>
+            </div>
+            
+        </div>
+
+        <!--footer-->
+        <footer>
+            <div class="container p-4">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-lg-5 col-md-12 mb-4 mb-md-0">
+                        <h5 class="font-primary">PT. PEFINDO Biro Kredit</h5>
+                        <div class="content-footer-left">
+                            <svg class="fav-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0)">
+                                <path d="M28 13.3334C28 22.6667 16 30.6667 16 30.6667C16 30.6667 4 22.6667 4 13.3334C4 10.1508 5.26428 7.09853 7.51472 4.84809C9.76516 2.59766 12.8174 1.33337 16 1.33337C19.1826 1.33337 22.2348 2.59766 24.4853 4.84809C26.7357 7.09853 28 10.1508 28 13.3334Z" stroke="#DC1C4D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 17.3334C18.2091 17.3334 20 15.5425 20 13.3334C20 11.1242 18.2091 9.33337 16 9.33337C13.7909 9.33337 12 11.1242 12 13.3334C12 15.5425 13.7909 17.3334 16 17.3334Z" stroke="#DC1C4D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0">
+                                <rect width="32" height="32" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            <p class="bodybig">
+                                Gedung Bursa Efek Indonesia Tower I Lantai 1 Jl. Jend. Sudirman Kav 52-53 Jakarta 12190 <br> <span class="font-primary">Phone (62-21) 515 4501</span>
+                            </p>
+                        </div>
+                    </div>
+            
+                    <!--Grid column-->
+                    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                        <h5 class="font-primary">IdScore</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-dark">Apa itu IdScore</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-dark">IdScore Bisnis</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-dark">Pricing</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                        <h5 class="font-primary">Legal</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-dark">Syarat & Ketentuan</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-dark">Kebijakan Privasi</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-dark">Pengawasan</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                        <h5 class="font-primary">Tentang Kami</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-dark">Tentang PEFINDO</a>
+                                <a href="#!" class="text-dark">Tentang MyIdScore</a>
+                                <a href="#!" class="text-dark">Hubungi Kami</a>
+                                <a href="#!" class="text-dark">FAQ</a>
+                            </li>
+                        </ul>
+                    </div>
+            
+                </div>
+                <hr>
+                <div class="text-center">
+                    <h5 class="font-active">Diatur dan diawasi oleh</h5>
+                    <img src="https://ipsm.io/api/image/64x64/c-718096/jpg" alt="Otoritas Jasa Keuangan">
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            function ambilFoto() {
+                if(document.getElementById("ambil-foto").className == "button button-primary button-font"){
+                    //ambil foto
+                    document.getElementById("ambil-foto").className = "d-none";
+                    document.getElementById("ambil-ulang-foto").className = "button button-secondary button-font margin-all-16";
+                    document.getElementById("gunakan-foto").className = "button button-primary button-font margin-all-16";
+                    document.getElementById("group-button").className = "d-flex";
+                    
+                }else if(document.getElementById("ambil-foto").className == "d-none"){
+                    //ambil ulang foto
+                    document.getElementById("ambil-foto").className = "button button-primary button-font";
+                    document.getElementById("ambil-ulang-foto").className = "d-none";
+                    document.getElementById("gunakan-foto").className = "d-none";
+                    document.getElementById("group-button").className = "text-center";
+                }
+                
+            }
+        </script>
+
+    </body>
+</html>

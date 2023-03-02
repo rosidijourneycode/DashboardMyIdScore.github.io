@@ -1,0 +1,127 @@
+<html>
+    <title>Guidelines Atomic Design MyIdScore</title>
+    <head>
+        
+        <!--Import bootstrap-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+        <!--Import main.css-->
+        <link href="../css/main.css" rel="stylesheet">
+    </head>
+    <body class="container-fluid bg-body">
+        <div id="myNavbar" class="navbar-dashboard">
+            
+            <div class="row">
+                <button type="button" class="closebtn button button-tertiary button-font" onclick="openCloseNavbar()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="d-none" id="content">
+                <div class="col-md-8">
+                    <h4 class="font-primary">MyIdScore</h4>
+                    <h5 style="margin-top: 32px;">Keputusan tepat, cepat dan tanpa ragu.</h5>
+                    <p>Analisis keuntungan, karakter, dan kelayakan kredit debitur dengan MyIdScore</p>
+                    <a href="#" style="margin-top: 64px;" class="font-primary">Keluar</a>
+                </div>
+            </div>
+        </div>
+          
+          <div id="main">
+              <div class="container">
+                <div class="col-md">
+                    <h4>Beranda</h4>
+                    <p class="bodybig">
+                        Beberapa langkah untuk mendapatkan keputusan yang tepat dengan skor kredit dari MyIdScore.
+                    </p>
+
+                    <div class="col-md">
+                        <button class="btn-full-width button-big-primary margin-top-down-16">
+                            <div class="row">
+                                <div class="col-sm-2 icon-center">
+                                    <img src="../assets/illustration/scoring.svg" alt="dapat kan idscore saya" class="img-fluid">                     
+                                </div>
+                                <div class="col-sm">
+                                    <h5 class="text-sm-left">Dapatkan IdScore Saya</h5>
+                                    <p class="bodybig text-sm-left">Tingkatkan peluang anda dengan Idscore, hanya perlu waktu beberapa menit saja.</p>
+                                </div>
+                                <div class="col-sm-2 icon-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-right-short font-primary" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                                      </svg>
+                                </div>
+                            </div>
+                        </button>
+            
+                        <button class="btn-full-width button-big-secondary margin-top-down-16">
+                            <div class="row">
+                                <div class="col-sm-2 icon-center">
+                                    <img src="../assets/illustration/credit-report.svg" alt="lihat aplikasi saya" class="img-fluid">   
+                                </div>
+                                <div class="col-sm">
+                                    <p class="caption font-link text-sm-left">*Kamu masih mempunyai sisa pengajuan</p>
+                                    <h5 class="text-sm-left">Pengajuan Aplikasi </h5>
+                                    <p class="bodybig text-sm-left">Lihat Pengajuan Idscore saya yang pernah diajukan.</p>
+                                </div>
+                                <div class="col-sm-2 icon-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-right-short font-primary" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                                      </svg>
+                                </div>
+                            </div>
+                        </button>
+            
+                        <button class="btn-full-width button-big-secondary margin-top-down-16">
+                            <div class="row">
+                                <div class="col-sm-2 icon-center">
+                                    <img src="../assets/illustration/profile.svg" alt="lihat profile" class="img-fluid">   
+                                </div>
+                                <div class="col-sm">
+                                    <h5 class="text-sm-left">Profil</h5>
+                                    <p class="bodybig text-sm-left">Informasi data diri anda ada disini.</p>
+                                </div>
+                                <div class="col-sm-2 icon-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-right-short font-primary" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                                      </svg>
+                                </div>
+                            </div>
+                        </button>
+            
+                    </div>
+
+                    <p class="caption font-active text-center margin-top-down-64">
+                        © Copyrights 2019 PT. PEFINDO Biro Kredit. All Rights Reserved
+                        <br>
+                        Ingin tahu banyak tentang credit scoring?
+                        <a href="">Lihat Disini</a>
+                    </p>
+
+
+                </div>
+              </div>
+          </div>
+          
+          <!--script openclose navbar-->
+          <script>
+                function openCloseNavbar() {
+                    if(document.getElementById("myNavbar").style.width == "300px"){
+                        //navbar is open then close it
+                        document.getElementById("myNavbar").style.width = "138px";
+                        //document.getElementById("main").style.marginLeft= "138px";
+                        document.getElementById("content").className = "d-none"; 
+                    }else if (document.getElementById("myNavbar").style.width = "138px") {
+                        //navbar is close then open it
+                        document.getElementById("myNavbar").style.width = "300px";
+                        //document.getElementById("main").style.marginLeft = "300px";
+                        document.getElementById("content").className = "d-flex justify-content-center";
+                  }   
+              }
+          </script>
+    </body>
+</html>
