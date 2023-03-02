@@ -1,0 +1,25 @@
+<svg width="113" height="112" viewBox="0 0 113 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<circle cx="38.2852" cy="57.5704" r="30" transform="rotate(-15 38.2852 57.5704)" fill="#3C763D"/>
+<circle cx="81.5438" cy="33.5559" r="16" transform="rotate(-15 81.5438 33.5559)" fill="#3C763D"/>
+<circle cx="72.6473" cy="81.4918" r="8" transform="rotate(-15 72.6473 81.4918)" fill="#3C763D"/>
+<g filter="url(#filter0_f)">
+<circle cx="56.5001" cy="55.5" r="21.5" fill="#DFF0D8"/>
+</g>
+<path d="M75.6485 46.9949L57.6172 38.0954C57.2683 37.9233 56.8845 37.8337 56.4955 37.8337C56.1064 37.8337 55.7226 37.9233 55.3737 38.0954L37.3425 46.9949C36.6512 47.3336 36.0684 47.8589 35.6599 48.5113C35.2515 49.1638 35.0336 49.9175 35.0309 50.6872V69.7381C35.0309 72.0177 36.9028 73.8659 39.2124 73.8659H73.7827C76.0922 73.8659 77.9642 72.0177 77.9642 69.7381V50.6872C77.9611 49.917 77.7426 49.163 77.3334 48.5105C76.9242 47.858 76.3405 47.333 75.6485 46.9949Z" fill="white" stroke="#3C763D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M71.0801 67.2615L57.7411 56.8862C57.3063 56.5481 56.7713 56.3645 56.2205 56.3645C55.6697 56.3645 55.1346 56.5481 54.6999 56.8862L41.3599 67.2615" fill="white"/>
+<path d="M71.0801 67.2615L57.7411 56.8862C57.3063 56.5481 56.7713 56.3645 56.2205 56.3645C55.6697 56.3645 55.1346 56.5481 54.6999 56.8862L41.3599 67.2615" stroke="#3C763D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M61.9989 59.7282L76.0334 49.0991" stroke="#3C763D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M36.4065 49.0991L50.7506 59.9346" stroke="#3C763D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<filter id="filter0_f" x="-54.9999" y="-56" width="223" height="223" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="45" result="effect1_foregroundBlur"/>
+</filter>
+<clipPath id="clip0">
+<rect width="112" height="112" fill="white" transform="translate(0.5)"/>
+</clipPath>
+</defs>
+</svg>
