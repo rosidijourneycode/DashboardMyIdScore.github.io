@@ -1,0 +1,806 @@
+/* Compile css to scss
+    --> install sass
+    --> open terminal
+    --> sass css/main.scss css/main.css 
+*/
+
+//INITIAL
+/* Color Variable*/
+$primary:#DC1C4D;
+$primary-light:#FFD3DF;
+$black:#212529;
+
+$active:#9DABB9;
+$disable:#CED4DA;
+
+$success-font:#3C763D;
+$success-bg:#DFF0D8;
+$fail-font:#843534;
+$fail-bg:#F2DEDE;
+$wait-font:#8A6D3B;
+$wait-bg:#FCF8E3;
+
+$link:#3A89FF;
+
+$white-bg:#F4F5F8;
+$white-container:#FFFFFF;
+
+html{
+    scroll-behavior: smooth;
+}
+
+/*font color*/
+.font-primary{
+    color: $primary;
+}
+.font-black{
+    color:$black;
+}
+.font-disable{
+    color: $disable;
+}
+.font-active{
+    color: $active;
+}
+.font-link{
+    color: $link;
+}
+.font-white{
+    color: $white-bg;
+}
+.font-succ{
+    color: $success-font;
+}
+.font-fail{
+    color: $primary;
+}
+
+/*bg color*/
+.bg-body{
+    background-color: $white-bg;
+}
+.bg-black{
+    background-color: $black;
+}
+.bg-primary-red{
+    background-color: $primary;
+}
+.bg-container{
+    background-color: $white-container;
+}
+.bg-gradient-banner{
+    background: linear-gradient(90deg, #DC1C4D 0%, #A82849 100%);
+}
+
+/*border*/
+.border-primary{
+    border: 2px solid $primary;
+}
+.border-tertiary{
+    border: 2px solid $black;
+}
+.border-soft{
+    border: 2px solid $active; 
+}
+.border-soft-1{
+    border: 1px solid $disable;
+}
+.border-top{
+    border-top: 1px solid $active;
+}
+.border-bottom{
+    border-bottom: 1px solid $active;
+}
+
+/*radius*/
+.radius-norm{
+    border-radius: 4px;
+}
+
+
+/*Typografi Style*/
+@font-face {
+    font-family: MyriadPro;
+    src: url("../assets/font-face/head/MYRIADPRO-BOLD.OTF") format("opentype");
+}
+@font-face {
+    font-family: Aller;
+    src: url("../assets/font-face/body/Aller_Rg.ttf")  format("truetype"), /* Safari, Android, iOS */
+}
+
+body{
+    font-family: Aller;
+    color: $black;
+}
+
+h1{
+    font-family: MyriadPro;
+    font-style: normal;
+    font-weight: bold;
+}
+h2{
+    font-family: MyriadPro;
+    font-style: normal;
+    font-weight: bold;
+}
+h3{
+    font-family: MyriadPro;
+    font-style: normal;
+    font-weight: bold;
+}
+h4{
+    font-family: MyriadPro;
+    font-style: normal;
+    font-weight: bold;}
+h5{
+    font-family: MyriadPro;
+    font-style: normal;
+    font-weight: bold;
+}
+.bodybig{
+    font-family: Aller;
+    font-style: normal;
+    font-weight: normal;
+}
+.body-1{
+    font-family: Aller;
+    font-style: normal;
+    font-weight: normal;
+}
+.subtitle{
+    font-family: Aller;
+    font-style: normal;
+    font-weight: normal;
+}
+.caption{
+    font-family: Aller;
+    font-style: normal;
+    font-weight: normal;
+}
+.button-font{
+    font-family: Aller;
+    font-style: normal;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+/*shadow*/
+.shadow-soft{
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+.shadow-button{
+    box-shadow: 0px 4px 14px rgba(220, 28, 77, 0.5);
+}
+
+/*button*/
+.btn-full-width{
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 14px 28px;
+    text-align: center;
+}
+
+.button{
+    justify-content: center;
+    align-items: center;
+    padding: 12px 32px;
+    border-radius: 4px;
+    &:focus {
+        outline: none;
+    }
+}
+
+.button-primary{
+    background-color: $primary;
+    border: none;
+    color: $white-bg;
+    transition: box-shadow 0.3s, background 0.8s;
+    background-position: center;
+    &:disabled{
+        background: $primary-light;
+        cursor: not-allowed !important;
+    }
+    &:hover:enabled{
+        box-shadow: 0px 4px 14px rgba(220, 28, 77, 0.5);
+        background: $primary radial-gradient(circle, transparent 1%, $primary 1%) center/15000%;
+
+    }
+    &:active:enabled{
+        background-color: $primary-light;
+        background-size: 100%;
+        transition: background 0s;
+    }
+    &:focus:enabled{
+        background-color: $primary-light;
+    }
+}
+
+.button-secondary{
+    border: 2px $primary;
+    background-color: $white-container;
+    color: $primary;
+    border: 2px solid $white-bg;
+    transition: border 0.3s, box-shadow 0.3s;
+    &:disabled{
+        background: $disable;
+        color: $white-bg;
+        cursor: not-allowed !important;
+    }
+    &:hover:enabled{
+        border: 2px solid $primary
+    }
+    &:focus:enabled{
+        box-shadow: 0 0 0 3px $primary-light;
+    }
+}
+
+.button-tertiary{
+    background-color: transparent;
+    border: none;
+    color: rgba(33, 37, 41, 0.56);
+    transition: color 0.3s;
+    &:disabled{
+        color: $disable;
+        cursor: not-allowed !important;
+    }
+    &:hover:enabled{
+        color: $black;
+    }
+    &:focus:enabled{
+        color: $black;
+        text-decoration: underline;
+    }
+}
+a{
+    transition: letter-spacing 0.8s;
+    &:focus:enabled{
+        outline: none;
+        letter-spacing: 2px;
+    }
+}
+.button-big-primary{
+    border: 2px solid $primary;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 20px;
+    background: $primary-light;
+
+    transition: box-shadow 0.3s, background 0.8s, color 0.3s;
+    background-position: center;
+
+    .icon-center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    &:disabled{
+        background: $primary-light;
+        border: 2px solid $disable;
+        cursor: not-allowed !important;
+    }
+    &:hover:enabled{
+        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.15);
+        background: $primary radial-gradient(circle, transparent 1%, $primary 1%) center/15000%;
+        color: $white-container;
+
+    }
+    &:active:enabled{
+        background-color: $primary-light;
+        background-size: 100%;
+        transition: background 0s;
+    }
+    &:focus:enabled{
+        background-color: $primary-light;
+        outline: none;
+    }
+}
+.button-big-secondary{
+    border: 0px solid $primary;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 20px;
+    background: $white-container;
+
+    transition: box-shadow 0.3s, background 0.8s, color 0.3s;
+    background-position: center;
+
+    .icon-center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    &:disabled{
+        background: $primary-light;
+        border: 2px solid $disable;
+        cursor: not-allowed !important;
+    }
+    &:hover:enabled{
+        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.15);
+        background: $primary radial-gradient(circle, transparent 1%, $primary 1%) center/15000%;
+        color: $white-container;
+    }
+    &:active:enabled{
+        background-color: $primary-light;
+        background-size: 100%;
+        transition: background 0s;
+    }
+    &:focus:enabled{
+        background-color: $primary-light;
+        outline: none;
+    }
+}
+
+/*input*/
+textarea:focus,
+select:focus,
+.form-control:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {   
+    border-color: $primary-light;
+    box-shadow: 0 0px 3px $primary-light inset, 0 0 8px $primary-light;
+    outline: 0 none;
+}
+textarea{width: 100%;}
+
+/*favicon*/
+.circle-socialmedia{
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+    background-color: #bbb;
+    margin: 8px;
+}
+.fav-icon-container{
+    flex-direction: row;
+    align-items: center;
+}
+.fav-icon{
+    height: 32px;
+    width: 32px;
+    margin: 0 8px 0 8px;
+    display: inline-block;
+}
+.alert-icon{
+    width: 24px;
+    height: 24px;
+    margin: 4px;
+}
+.icon{
+    padding: 8px;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 44px;
+    height: 44px;
+}
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+    //rotationg loading icon
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+}
+@keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+}
+.rotating {
+    -webkit-animation: rotating 2s linear infinite;
+    -moz-animation: rotating 2s linear infinite;
+    -ms-animation: rotating 2s linear infinite;
+    -o-animation: rotating 2s linear infinite;
+    animation: rotating 2s linear infinite;
+}
+
+/*status*/
+.status-step{
+    padding: 8px;
+    align-items: center;
+    border: 2px solid $active;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 44px;
+    height: 44px;
+    color: $active;
+}
+.status-step-active{
+    border: 2px solid $black;
+    color: $black;
+}
+.status-step-now{
+    border: 2px solid $primary;
+    color: $primary;
+}
+.status-step-fail{
+    border: 2px solid $primary;
+    color: $primary;
+    background-color: $primary-light;
+}
+.status-step-succ{
+    border: 2px solid $success-font;
+    color: $success-font;
+    background-color: $success-bg;
+}
+.status-step-wait{
+    border: 2px solid $wait-font;
+    color: $wait-font;
+    background-color: $wait-bg;
+}
+.no-border{
+    border: none;
+}
+
+.status-set{
+    padding: 8px 12px;
+    border-radius: 4px;
+    .status-set-inside{
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        margin: 0px 8px;
+    }
+}
+
+.line-status-bar{
+    width: 80px;
+    height: 4px;
+    flex-grow: 0;
+    margin: 28px 0 28px;
+    background-color: $active;
+}
+.line-status-bar-succ{
+    width: 80px;
+    height: 4px;
+    flex-grow: 0;
+    margin: 28px 0 28px;
+    background-color: $success-font;
+}
+.none-select{
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+/*footer*/
+footer{
+    background-color: $white-container;
+}
+
+.content-footer-left{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+/*navbar*/
+.navbar-fixed{
+    background-color: $black;
+    justify-content: center;
+    align-items: center;
+    
+    &:focus {
+        outline: none;
+    }
+    
+    .button{
+        border-radius: 0px;
+        outline: none;
+    }
+    .button-login{
+        background-color: transparent;
+        border: none;
+        color: $white-container;
+        transition: color 0.3s;
+        &:disabled{
+            color: $white-bg;
+            cursor: not-allowed !important;
+        }
+        &:hover:enabled{
+            color: $active;
+        }
+        &:focus:enabled{
+            color: $white-bg;
+            text-decoration: underline;
+        }
+    }
+    .button-regist{
+        background-color: $primary;
+        border: none;
+        color: $white-bg;
+        transition: box-shadow 0.3s, background 0.8s;
+        background-position: center;
+        &:disabled{
+            background: $primary-light;
+            cursor: not-allowed !important;
+        }
+        &:hover:enabled{
+            box-shadow: 0px 4px 14px rgba(220, 28, 77, 0.5);
+            background: $primary radial-gradient(circle, transparent 1%, $primary 1%) center/15000%;
+
+        }
+        &:active:enabled{
+            background-color: $primary-light;
+            background-size: 100%;
+            transition: background 0s;
+        }
+        &:focus:enabled{
+            background-color: $primary-light;
+        }
+    }
+}
+
+
+.navbar-landingpage{
+    a{
+        color: $black;
+        &:hover{
+            color: $primary;
+            outline: none;
+        }
+    }
+
+    /* Set the border color to the desired color */
+    .custom-toggler.navbar-toggler {
+        border-color: $black;
+        background-color: $white-container;
+    }
+    .custom-toggler .navbar-toggler-icon {
+        color: $black;   
+    }
+}
+
+.navbar-dashboard {
+    height: 100%;
+    width: 138px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding: 60px 0px 0px 0px;
+    background: $white-container;
+    
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.15);
+
+    overflow: hidden;
+
+    .favicon{
+      width: 64px;
+    }
+    a{
+      padding: 8px 8px 8px 8px;
+      text-decoration: none;
+      color: $fail-bg;
+      display: block;
+      transition: 0.3s;
+
+    }
+    a:hover{
+      color: $primary;
+    }
+    .closebtn{
+      position: absolute;
+      top: 0;
+      right: 25px;
+      margin-left: 50px;
+    }
+}
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+  left:500px;
+  margin: 32px 0px 0px 138px;
+}
+
+
+/*margin*/
+.margin-top-down-16{
+    margin: 16px 0px;
+}
+.margin-top-down-32{
+    margin: 32px 0px;
+}
+.margin-top-down-64{
+    margin: 64px 0px;
+}
+
+.margin-down-32{
+    margin-bottom: 32px;
+}
+.margin-down-12{
+    margin-bottom: 12px;
+}
+.margin-down-8{
+    margin-bottom: 8px;
+}
+
+.margin-left-right-32{
+    margin: 0px 32px;
+}
+.margin-left-right-12{
+    margin: 0px 12px;
+}
+.margin-left-right-8{
+    margin: 0px 8px;
+}
+.margin-left-right-4{
+    margin: 0px 4px;
+}
+
+.margin-all-32{
+    margin: 32px;
+}
+.margin-all-16{
+    margin: 16px;
+}
+.margin-all-8{
+    margin: 8px;
+}
+.margin-all-4{
+    margin: 4px;
+}
+.margin-all-0{
+    margin: 0px;
+    padding: 0px;
+}
+
+.margin-right-32{
+    margin-right: 12px;
+}
+.padding-all-32{
+    padding: 32px;
+}
+.padding-left-64{
+    padding-left: 64px;
+}
+
+/*step*/
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: $disable;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+  }
+.step.finish {
+    background-color: $primary;
+}
+
+/*hidden*/
+.opacity-0{
+    opacity: 0;
+}
+
+/*keyframe*/
+.illust-show{
+    animation: hidetoshow 2.3s;
+}
+
+@keyframes hidetoshow{
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+}
+
+/*utility*/
+.vertical-center{
+    justify-content: center;
+    align-items: center;
+}
+.footer-card-no-bg-border{
+    background-color:transparent;
+    border-top: transparent;
+}
+
+/*tabs*/
+/* not active */
+.nav-pills .pill-cus .nav-link:not(.active) {
+    color: $active;
+
+    text-decoration: none;
+    .filter{
+        filter: invert(76%) sepia(8%) saturate(537%) hue-rotate(169deg) brightness(88%) contrast(88%);
+    }
+}
+
+/* active*/
+.nav-pills .pill-cus .nav-link {
+    background-color:$white-container;
+    color: $primary;
+
+    text-decoration: underline;
+    text-decoration-color: $primary;
+    -webkit-text-decoration-color: $primary; /* Safari */  
+
+    .filter{
+        filter: invert(28%) sepia(78%) saturate(5131%) hue-rotate(332deg) brightness(86%) contrast(100%);
+    }
+}
+
+/*selectTime as div*/
+.time-group{
+    display: flex;
+    flex-direction: row;
+}
+
+.time{
+    align-items: center;
+    padding: 8px 24px;
+    background-color:$white-container;
+    margin: 4px 4px 0 0; 
+    
+    cursor:pointer;
+    border-color: $active;
+    border: 1px solid $active;
+    color: $active;
+    user-select: none;
+
+    transition: 0.3s;
+    &.selected{
+        border-color: $primary;
+        border: 2px solid $primary;
+        color: $primary;
+    }
+    &.disabled{
+        border-color: $disable;
+        border: 2px solid $disable;
+        color: $disable;
+        pointer-events: none;
+    }
+}
+
+/*dashboard style*/
+.dash-black-div{
+    background-image: url("../assets/illustration/dash-bg-1.svg");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    object-fit: fill;
+}
+
+.center-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/*Imagery*/
